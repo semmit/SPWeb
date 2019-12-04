@@ -1,6 +1,5 @@
 import { Component, OnInit, OnChanges, OnDestroy } from "@angular/core";
 import * as application from "tns-core-modules/application";
-import { BarcodeScanner } from "nativescript-barcodescanner";
 import { Frame } from "tns-core-modules/ui/frame/frame";
 
 @Component({
@@ -35,11 +34,3 @@ export class AppComponent implements OnInit, OnChanges, OnDestroy {
     }
 
 }
-
-export function createBarcodeScanner() {
-  return new BarcodeScanner();
-}
- 
-providers: [
-  { provide: BarcodeScanner, useFactory: (createBarcodeScanner) }
-]
